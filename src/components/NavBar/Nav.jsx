@@ -22,12 +22,12 @@ const Navigation = ({ isAuthenticated, userName }) => {
       </Link>
       <div>
         {!isAuthenticated ? (
-          <Link className="main-nav-item" to="/sign-in">
+          <Link className="main-nav-item" to="/login">
             <FontAwesomeIcon icon={faUserCircle} /> Sign In
           </Link>
         ) : (
           <>
-            <Link className="main-nav-item" to="/user">
+            <Link className="main-nav-item" to="/profile">
               <FontAwesomeIcon icon={faUserCircle} /> {userName}
             </Link>
             <Link

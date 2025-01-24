@@ -1,7 +1,7 @@
 import React from 'react'; 
 import './User.min.css';
 
-const UserEditForm = ({ 
+const ProfileUserEdit = ({ 
     editUserName, 
     firstName, 
     lastName, 
@@ -56,4 +56,4 @@ const UserEditForm = ({
     </div>
 );
 
-export default UserEditForm;
+export default ProfileUserEdit;

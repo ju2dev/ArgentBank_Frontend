@@ -4,10 +4,11 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/userSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import UserError from '../User/UserError';  
+import UserError from '../Profile/ProfileError';  
 import './signIn.min.css';
 
-const SignInForm = () => {
+const Login = () => {
+   // État pour gérer les données du formulaire
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -72,7 +73,7 @@ const SignInForm = () => {
         localStorage.setItem('userEmail', formData.email);
       }
 
-      navigate('/user');
+      navigate('/profile');
     } catch (error) {
       setErrorMessage(error.message);  // Mettre à jour l'état errorMessage avec le message d'erreur
     }
@@ -119,4 +120,4 @@ const SignInForm = () => {
   );
 };
 
-export default SignInForm;
+export default Login;

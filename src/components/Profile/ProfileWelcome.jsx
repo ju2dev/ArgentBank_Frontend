@@ -1,7 +1,7 @@
 import React from 'react'; 
 import './User.min.css'; 
 
-const UserWelcome = ({ firstName, lastName, onEdit }) => (
+const ProfileWelcome = ({ firstName, lastName, onEdit }) => (
     <div className="welcome">
         <h1>
             Welcome back<br />
@@ -12,4 +12,4 @@ const UserWelcome = ({ firstName, lastName, onEdit }) => (
         </button>
     </div>
 );
-export default UserWelcome;
+export default ProfileWelcome;

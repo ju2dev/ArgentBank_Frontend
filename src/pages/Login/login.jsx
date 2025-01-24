@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../../components/NavBar/Nav';
 import Footer from '../../components/Footer/footer';
-import SignIn from '../../components/SignIn/signIn';  
+import SignIn from '../../components/Login/login';  
 
 const Sign = () => {
   return (

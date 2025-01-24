@@ -5,7 +5,7 @@ import { setUser, clearUser } from '../redux/userSlice';
 // Hook personnalisé pour gérer le profil utilisateur
 export const useUserProfile = () => {
     // Sélection des données utilisateur et token depuis le store Redux
-    const { user, isAuthenticated, token } = useSelector(state => state.user);
+    const { user, isAuthenticated} = useSelector(state => state.user);
     const dispatch = useDispatch(); // Initialisation de dispatch pour envoyer des actions
 
     // État local pour gérer le mode d'édition, le champ de modification du nom d'utilisateur et les erreurs
@@ -13,9 +13,12 @@ export const useUserProfile = () => {
     const [editUserName, setEditUserName] = useState(''); // Stocke le nom d'utilisateur modifiable
     const [error, setError] = useState(null); // Stocke les messages d'erreur
 
+    const token = localStorage.getItem('token'); // Récupère le token
+
     // Effet pour récupérer les informations utilisateur lorsque le composant est monté ou le token change
     useEffect(() => {
         const fetchUserProfile = async () => {
+            if (!token) return;
             try {
                 const response = await fetch('http://localhost:3001/api/v1/user/profile', {
                     headers: {
@@ -41,9 +44,8 @@ export const useUserProfile = () => {
             }
         };
 
-        if (token) {
+
             fetchUserProfile(); // Appelle la fonction si le token est disponible
-        }
     }, [dispatch, token]); // Dépendances de l'effet pour éviter les appels redondants
 
     // Gère les changements dans le champ de modification du nom d'utilisateur

@@ -1,11 +1,11 @@
 import React from 'react'; 
 import Navigation from '../../components/NavBar/Nav';
 import Footer from '../../components/Footer/footer';
-import UserWelcome from '../../components/User/UserWelcome'; 
-import UserEditForm from '../../components/User/UserEditForm'; 
+import UserWelcome from '../../components/Profile/ProfileWelcome'; 
+import UserEditForm from '../../components/Profile/ProfileEditForm'; 
 import AccountSection from '../../components/Account/account'; 
 import useUserProfile from '../../hooks/useUserProfile'; 
-import '../../components/User/User.min.css'; 
+import '../../components/Profile/User.min.css'; 
 
 const UserPage = () => {
      // Extraction des données et fonctions depuis le hook useUserProfile

@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserError.min.css';  
 
-const UserError = ({ message }) => {
+const ProfileError = ({ message }) => {
   if (!message) return null; // Si aucun message d'erreur n'est passé, ne rien afficher
 
   return (
@@ -11,4 +11,4 @@ const UserError = ({ message }) => {
   );
 };
 
-export default UserError;
+export default ProfileError;
